@@ -1,0 +1,21 @@
+{% extends "application.html" %}
+{% block style %}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        重要単語抽出
+    </h1>
+    <div>
+        英文が写った画像を投げるとその役と予め登録されている重要単語を返す
+    </div>
+    <form action = "/important" method = "POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="member_image">画像</label>
+            <input type="file" name="member_image" >
+        </div>
+        <div class="form-group">
+            <input type="submit" value="読み込み">
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "application.html" %}
+{% block style %}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        画像分析
+    </h1>
+    <div>
+        分析結果
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>英語</th>
+          <th>日本語</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in words %}
+        <tr>
+          <td>{{ word["eng_word"]  }}</td>
+          <td>{{ word["jap_word"][0]  }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

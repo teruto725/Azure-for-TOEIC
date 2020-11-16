@@ -1,0 +1,29 @@
+{% extends "application.html" %}
+{% block style %}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        単語帳エクスポート
+    </h1>
+    <div>
+        toeic_words.csvに次の単語が追加されました
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>英語</th>
+          <th>日本語</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in range(word_ens | length)%}
+        <tr>
+          <td>{{ word_ens[i] }}</td>
+          <td>{{ word_japs[i]  }}</td>
+        </tr>
+
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

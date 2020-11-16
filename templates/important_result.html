@@ -1,0 +1,47 @@
+{% extends "application.html" %}
+{% block style %}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        重要単語抽出
+    </h1>
+    <h2>
+        分析結果
+    </h2>
+    {% for i in range(sentences | length)%}
+    <div class="font-weight-bold">
+        {{ sentences[i] }}
+    </div>
+    <div class="font-weight-light">
+         {{ sen_japs[i]  }}
+    </div>
+    <br>
+    {% endfor %}
+
+
+    <br>
+    <h2>
+        重要単語
+    </h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>英語</th>
+          <th>日本語</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in words %}
+        <tr>
+          <td>{{ word["eng_word"]  }}</td>
+          <td>{{ word["jap_word"] }}</td>
+        </tr>
+
+      {% endfor %}
+      </tbody>
+    </table>
+
+
+{% endblock %}

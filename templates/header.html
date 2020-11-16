@@ -1,0 +1,22 @@
+<div>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark mt-3 mb-3" overflow="hidden">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{{url_for('menu')}}" class="navbar-brand">Azure for TOEIC</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="{{url_for('part1')}}" class="nav-link">画像分析</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{url_for('important')}}" class="nav-link">重要表現抽出</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{url_for('wordbook')}}" class="nav-link">単語帳エクスポート</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
